@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+
+                <div>
+                    <h2>Nova AI</h2>
+                    <span>Your AI companion</span>
+                </div>
+            </div>
+
+            <button class="new-chat">
+                <span>＋</span>
+                New conversation
+            </button>
+
+            <div class="sidebar-section">
+                <p>YOUR SPACE</p>
+
+                <div class="history-item active">
+                    <span>💬</span>
+                    Current conversation
+                </div>
+
+                <div class="history-item">
+                    <span>🕘</span>
+                    Recent chats
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Gemini AI connected
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat -->
+        <main class="chat-container">
+
+            <!-- Header -->
+            <header class="chat-header">
+
+                <div class="ai-profile">
+                    <div class="ai-avatar">✦</div>
+
+                    <div>
+                        <h1>Nova AI</h1>
+
+                        <div class="online-status">
+                            <span></span>
+                            Online
+                        </div>
+                    </div>
+                </div>
+
+                <button class="menu-button">•••</button>
+
+            </header>
+
+
+            <!-- Chat Area -->
+            <section class="chat-box">
+
+                <!-- Welcome -->
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        ✦
+                    </div>
+
+                    <h2>How can I help you today?</h2>
+
+                    <p>
+                        Ask me anything. I'm here to help you think,
+                        learn and create.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button onclick="useSuggestion('Explain Python in simple words')">
+                            <span>🐍</span>
+                            Explain Python simply
+                        </button>
+
+                        <button onclick="useSuggestion('Give me some project ideas')">
+                            <span>💡</span>
+                            Give me project ideas
+                        </button>
+
+                        <button onclick="useSuggestion('Help me learn programming')">
+                            <span>🚀</span>
+                            Help me learn programming
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Initial AI message -->
+                <div class="message bot-message">
+
+                    <div class="avatar ai-small">
+                        ✦
+                    </div>
+
+                    <div class="message-content">
+
+                        <span class="sender">Nova AI</span>
+
+                        <div class="bubble">
+                            Hello! 👋 I'm Nova. What would you like to
+                            explore today?
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input -->
+            <div class="input-wrapper">
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        placeholder="Message Nova AI..."
+                        autocomplete="off"
+                    >
+
+                    <button class="send-button">
+                        <span>↑</span>
+                    </button>
+
+                </div>
+
+                <p class="input-note">
+                    Nova AI can make mistakes. Check important information.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
